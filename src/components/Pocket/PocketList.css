@@ -5,9 +5,7 @@
     margin-bottom: 37px;
   }
 
-  .pocket__list-header > span{
-    cursor: pointer;
-  }
+  
   
   .pocket__list-header::before {
     content: "";

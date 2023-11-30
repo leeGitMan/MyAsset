@@ -10,8 +10,6 @@ function PocketList(props){
         <div className="pocket__list">
             <div className="pocket__list-header">
                 <span className="fs-normal">전체 내역</span>
-                <span className='fs-normal'>수입</span>
-                <span className='fs-normal'>지출</span>
             </div>
 
             <PokcetItems item = {props.item} setItem = {props.setItem}
