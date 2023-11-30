@@ -1,0 +1,95 @@
+
+.insert-data-form-date-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+
+.insert-data-form-date-box > strong{
+    position: absolute;
+    top: -35px;
+}
+
+.insert-data-form-date{
+    display: flex;
+    gap: 1em;
+    width: 350px;
+}
+
+#dateInput{
+    width: 350px;
+    height: 30px;
+    padding: 10px;
+}
+
+
+.insert-data-form-data-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.insert-data-form-data-box > strong{
+    position: absolute;
+    top: -35px;
+}
+
+.insert-data-form-data{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+    gap: .5em;
+}
+
+.inputText {
+    width: 350px;
+    height: 30px;
+    padding: 10px;
+}
+
+
+.insert-data-form-input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.insert-data-form-input  > strong{
+    position: absolute;
+    top: -35px;
+}
+
+.btnBox{
+    display: flex;
+    gap: 2em;
+}
+
+.alertSpan{
+    position: absolute;
+    top:-35px;
+    left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

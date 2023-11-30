@@ -1,0 +1,27 @@
+
+
+.pocket_status-title{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 250px;
+  height: 80px;
+}
+
+.pocket_status-detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.pocket_status-detail--desc{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+
+
+
+

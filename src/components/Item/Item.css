@@ -1,0 +1,57 @@
+
+
+ .item-con {
+    position: relative;
+    margin-bottom: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* 부드러운 전환 효과 추가 */
+    border-radius: 10px;
+  }
+
+  .item{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 10px;
+    padding: 18px 14px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 15px 12px;
+    cursor: pointer;
+    background-color: #f4f3f3;
+  }
+
+  
+  .itemContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    gap: .3em;
+  }
+  
+  
+  .item-btn-box {
+    position: absolute;
+    right: 0px;
+    bottom: 3.8px;
+    writing-mode: vertical-lr;
+    padding: 10px 10px;
+    width: 40px;
+    height: 100px;
+    background-color: #FF5B5B;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* 부드러운 전환 효과 추가 */
+  }
+  
+  .item-con:hover {
+    transform: translateX(-10%); /* .item-con을 왼쪽으로 10% 이동하여 .item-btn-box를 드러냄 */
+  }
+  
+  .item-con:hover .item-btn-box {
+    transform: translateX(100%); /* .item-btn-box를 다시 보이는 위치로 이동 */
+    opacity: 1;
+  }
+  
+
+

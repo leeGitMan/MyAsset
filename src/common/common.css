@@ -1,0 +1,23 @@
+.common-box-con{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 3em;
+}
+
+.common-box-con-second{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 4em;
+}
+
+input{
+    outline: none;
+}
