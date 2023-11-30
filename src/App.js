@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import PocketBox from './components//Pocket/PocketBox.js';
 import InsertDataForm from './components/InsertData/InsertDataForm.js'
@@ -17,8 +17,25 @@ function App() {
   let [item, setItem] = useState([]); // 수입 or 지출 날짜를 넣어줄 배열 state
 
   
+  useEffect(() => {
+    const storedItems = localStorage.getItem('items');
+    const storedInBalance = parseInt(localStorage.getItem('inBalance')) || 0;
+    const storedExBalance = parseInt(localStorage.getItem('exBalance')) || 0;
+    const storedTotal = parseInt(localStorage.getItem('total')) || 0;
+  
+    if (storedItems) {
+      setItem(JSON.parse(storedItems));
+      setInBalance(storedInBalance);
+      setExBalance(storedExBalance);
+      setTotal(storedTotal);
+    }
+  }, []);
+  
 
   return (
+
+    
+    
     <div className="App">
       <PocketBox inBalance={inBalance} exBalance={exBalance} setInBalance={setInBalance} expenditure={expenditure} setExBalance={setExBalance}  total={total} setTotal={setTotal} item = {item} setItem={setItem}/>
 

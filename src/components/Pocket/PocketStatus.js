@@ -5,7 +5,7 @@ import './../../common/font.css';
 
 
 function PocketStatus(props){
-
+    
     const options = { style: 'currency', currency: 'KRW' };
     const commaTotal = props.total.toLocaleString('ko-KR', options);
     const commaInBal = props.inBalance.toLocaleString();

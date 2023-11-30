@@ -23,6 +23,7 @@ function PokcetItems(props){
     const handelDeleteItem = (itemId) =>{
         const updatedItems = copyItemArr.filter(copyItemArr => copyItemArr.id !== itemId);
         props.setItem(updatedItems);
+        localStorage.setItem('items', JSON.stringify(updatedItems));
         
         
         // 일단은 삭제할 항목을 미리 찾자
@@ -35,12 +36,18 @@ function PokcetItems(props){
             props.setInBalance(updatedInBalance);
             props.setTotal(updatedTotal);
 
+            localStorage.setItem('inBalance', updatedInBalance);
+            localStorage.setItem('total', updatedTotal);
+
         // 삭제된 항목이 지출인 경우
         }else if(deletedItem.checkType === 'expenditure'){
             const updatedInBalance = props.exBalance - deletedItem.expenditure;
             const updatedTotal = props.total + deletedItem.expenditure;
             props.setExBalance(updatedInBalance);
             props.setTotal(updatedTotal);
+
+            localStorage.setItem('exBalance', updatedInBalance);
+            localStorage.setItem('total', updatedTotal);
         }
 
 

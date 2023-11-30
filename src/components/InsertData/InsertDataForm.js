@@ -71,6 +71,11 @@ function InsertDataForm(props){
         });
         setItem(newItem);
 
+        // 로컬 스토리지에 데이터 저장
+        localStorage.setItem('items', JSON.stringify(newItem));
+        localStorage.setItem('inBalance', inBalance);
+        localStorage.setItem('exBalance', exBalance);
+        localStorage.setItem('total', total);
         
         // input 태그 초기화
         // 근데 왜 초기화가 안되지?
