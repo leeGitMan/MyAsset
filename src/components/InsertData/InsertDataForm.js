@@ -41,6 +41,13 @@ function InsertDataForm(props){
         // 그래서 1000을 입력했으면 
         // 01000이 출력이 된다.
         // 여기서 parseInt로 문자열을 정수로 바꿔주고 넣어줘야한다.
+
+        // 만약 금액 입력란에 '-' , '+' 기호 붙일 시 방지
+        if(inputAmount.includes('-') || inputAmount.includes('+')){
+            alert('금액은 숫자로만 입력해주세요.')
+            return
+        }
+
         let parsedAmount = parseInt(inputAmount, 10)
 
         if(isNaN(parsedAmount)){
