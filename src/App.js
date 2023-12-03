@@ -30,6 +30,8 @@ function App() {
       setTotal(storedTotal);
     }
   }, []);
+
+  localStorage.clear();
   
 
   return (

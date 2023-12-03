@@ -32,6 +32,8 @@ function InsertDataForm(props){
     
     function addData(e){
 
+        
+
         e.preventDefault(); // 페이지 리로드 방지
         // 수입이면 income
         // 지출이면 expenditure
@@ -40,6 +42,11 @@ function InsertDataForm(props){
         // 01000이 출력이 된다.
         // 여기서 parseInt로 문자열을 정수로 바꿔주고 넣어줘야한다.
         let parsedAmount = parseInt(inputAmount, 10)
+
+        if(isNaN(parsedAmount)){
+            alert('금액은 숫자로만 입력해주세요.');
+            return
+        }
 
         if(inputRadio === 'income'){
             // 수입일 때
@@ -51,9 +58,10 @@ function InsertDataForm(props){
             setTotal(total);
         }else if(inputRadio === 'expenditure'){
             // 지출일 때
+            
             setExpenditure(expenditure += parsedAmount);
             exBalance += expenditure;
-            setExBalance(expenditure);
+            setExBalance(exBalance);
             // 지출을 총합에서 빼주기
             total -= parsedAmount;
             setTotal(total);
@@ -83,11 +91,12 @@ function InsertDataForm(props){
     }
 
     useEffect(() =>{
-        setInputRadio('');
+        setInputRadio(inputRadio);
         setInputData("");
         setInputAmount("");
         setInputDate("");
         setIncome(0);
+        setExpenditure(0);
     },[item]);
 
 
